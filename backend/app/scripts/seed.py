@@ -11,9 +11,9 @@ import sqlite3
 import psycopg2
 from psycopg2.extras import execute_batch
 
-from ..config import DATABASE_URL, BOT_ROOT
+from ..config import DATABASE_URL, BACKEND_DIR
 
-SQLITE_DB_PATH = str(BOT_ROOT / "data" / "travel2.sqlite")
+SQLITE_DB_PATH = str(BACKEND_DIR / "data" / "travel2.sqlite")
 
 
 def get_pg_connection():

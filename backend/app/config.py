@@ -13,15 +13,12 @@ from dotenv import load_dotenv
 APP_DIR = Path(__file__).resolve().parent
 BACKEND_DIR = APP_DIR.parent
 PROJECT_ROOT = BACKEND_DIR.parent
-BOT_ROOT = Path("/home/client/langraph/customer_support_bot")
 
-# Priority loading: backend/.env -> project_root/.env -> bot_root/.env
+# Priority loading: backend/.env -> project_root/.env
 if (BACKEND_DIR / ".env").exists():
     load_dotenv(BACKEND_DIR / ".env", override=True)
 elif (PROJECT_ROOT / ".env").exists():
     load_dotenv(PROJECT_ROOT / ".env", override=False)
-elif (BOT_ROOT / ".env").exists():
-    load_dotenv(BOT_ROOT / ".env", override=False)
 
 # Neon PostgreSQL connection string
 DEFAULT_DATABASE_URL = (
