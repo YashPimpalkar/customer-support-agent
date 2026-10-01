@@ -1,0 +1,16 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
