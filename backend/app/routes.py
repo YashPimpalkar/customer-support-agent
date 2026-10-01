@@ -12,7 +12,7 @@ from .agents import AgentManager
 from .db import DatabaseService
 from .scripts.seed import run_migration
 
-router = APIRouter(prefix="/api", tags=["AeroAssist API"])
+router = APIRouter(tags=["AeroAssist API"])
 
 
 # ---------------------------------------------------------------------------

@@ -24,7 +24,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register API Router
+# Register API Router under both /api and root /
+# Ensures compatibility whether Vercel strips /api or client includes /api
+app.include_router(router, prefix="/api")
 app.include_router(router)
 
 
